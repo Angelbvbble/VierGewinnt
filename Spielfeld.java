@@ -61,33 +61,38 @@ public class Spielfeld
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        boolean erg = false;
-        int i = 0;
-        int j = 0;
-        if(Spielfeld[i][j] != null)
+        int zaehler = 0;
+        for(int i = 0; i < Spielfeld.length; i++)
         {
-            i = 1;
+            zaehler = 0;
+            for(int j = 0; j < Spielfeld[0].length-2; j++)
+            {
+                if(Spielfeld[i][j] != null)
+                {
+                    zaehler = 1;
+                }
+                else
+                {
+                    zaehler = 0;
+                }
+                if(Spielfeld[i][j] != null && Spielfeld[i][j+1] != null)
+                {
+                    if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen())
+                    {
+                        zaehler = zaehler + 1;
+                    }
+                }
+                else
+                {
+                    zaehler = 0;
+                }
+                if(zaehler == 4)
+                {
+                    return true;
+                }
+            }
         }
-        else
-        {
-            i = 0;
-        }
-        for( i <= Spielfeld.length -2; i++)
-        {
-            Spielfeld[i][0] =   Spielfeld[i+1][0];
-        }
-        return true;
-        if(Spielfeld[i][j] != null)
-        {
-            i = 1;
-        }
-        else
-        {
-            i = 0;
-        }
-        
-        // Diese Methode übernimmt Stephan
-        return erg;
+        return false;
     }       
 
     /**
