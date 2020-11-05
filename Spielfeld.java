@@ -77,9 +77,14 @@ public class Spielfeld
         {
             for(int j = 0; j>Spielfeld[i].length-4; j++)
             {
-                if(Spielfeld[i][j] == Spielfeld[i][j+1] && Spielfeld[i][j] == Spielfeld[i][j+2] && Spielfeld[i][j] == Spielfeld[i][j+3])
+                if(Spielfeld[i][j] == null )
                 {
-                    return true;
+                    if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen() && 
+                       Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+2].gibZeichen() && 
+                       Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() )
+                    {    
+                       return true;
+                    }
                 }
             }
         }
