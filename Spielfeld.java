@@ -131,7 +131,7 @@ public class Spielfeld
         {
           for (int a = 0; a < Spielfeld[0].length; a++)
           {
-        if(Spielfeld[i][a] != 0 && Spielfeld[i+1][a+1] != 0 && Spielfeld[i+2][a+2] != 0 && Spielfeld[i+3][a+3] != 0 )
+        if(Spielfeld[i][a] != null && Spielfeld[i+1][a+1] !=null && Spielfeld[i+2][a+2] != null && Spielfeld[i+3][a+3] != null )
         {
            if (Spielfeld[i][a].gibZeichen() == Spielfeld[i+1][a+1].gibZeichen()&& Spielfeld[i][a].gibZeichen() == Spielfeld[i+2][a+2].gibZeichen() && Spielfeld[i][a].gibZeichen() == Spielfeld[i+3][a+3].gibZeichen())
             {
