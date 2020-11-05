@@ -72,8 +72,17 @@ public class Spielfeld
     private boolean pruefeVierInEinerZeile ()
     {
         boolean erg = false;
-        //Marc
-        return erg;
+        for(int i = 0; i>Spielfeld.length; i++)
+        {
+            for(int j = 0; j>Spielfeld[i].length-4; j++)
+            {
+                if(Spielfeld[i][j] == Spielfeld[i][j+1] && Spielfeld[i][j] == Spielfeld[i][j+2] && Spielfeld[i][j] == Spielfeld[i][j+3])
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     /**
