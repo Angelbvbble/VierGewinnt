@@ -61,9 +61,38 @@ public class Spielfeld
      */
     private boolean pruefeVierInEinerSpalte ()
     {
-        boolean erg = false;
-        // Diese Methode übernimmt Stephan
-        return erg;
+        int zaehler = 0;
+        for(int i = 0; i < Spielfeld.length; i++)
+        {
+            zaehler = 0;
+            for(int j = 0; j < Spielfeld[0].length-2; j++)
+            {
+                if(Spielfeld[i][j] != null)
+                {
+                    zaehler = 1;
+                }
+                else
+                {
+                    zaehler = 0;
+                }
+                if(Spielfeld[i][j] != null && Spielfeld[i][j+1] != null)
+                {
+                    if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen())
+                    {
+                        zaehler = zaehler + 1;
+                    }
+                }
+                else
+                {
+                    zaehler = 0;
+                }
+                if(zaehler == 4)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }       
 
     /**
@@ -72,7 +101,22 @@ public class Spielfeld
     private boolean pruefeVierInEinerZeile ()
     {
         boolean erg = false;
-        return erg;
+        for(int i = 0; i>Spielfeld.length; i++)
+        {
+            for(int j = 0; j>Spielfeld[i].length-4; j++)
+            {
+                if(Spielfeld[i][j] != null && Spielfeld[i][j+1] != null && Spielfeld[i][j+2] != null && Spielfeld[i][j+3] != null)
+                {
+                    if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen() && 
+                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+2].gibZeichen() && 
+                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() )
+                    {    
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     /**
@@ -119,7 +163,7 @@ public class Spielfeld
      */
     public void ausgeben()
     {
-        
+
     }
 
     /**
@@ -128,7 +172,7 @@ public class Spielfeld
      */
     public void ausgabeGewonnen (String Spieler)
     {
-        
+
     }
 
     /**
@@ -137,7 +181,7 @@ public class Spielfeld
      */
     public void neuesSpielfeldErzeugen ()
     { 
-        
+
     }
 
     public Stein [][] gibSpielfeld()
