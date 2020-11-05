@@ -62,6 +62,29 @@ public class Spielfeld
     private boolean pruefeVierInEinerSpalte ()
     {
         boolean erg = false;
+        int i = 0;
+        int j = 0;
+        if(Spielfeld[i][j] != null)
+        {
+            i = 1;
+        }
+        else
+        {
+            i = 0;
+        }
+        for( i <= Spielfeld.length -2; i++)
+        {
+            Spielfeld[i][0] =   Spielfeld[i+1][0];
+        }
+        return true;
+        if(Spielfeld[i][j] != null)
+        {
+            i = 1;
+        }
+        else
+        {
+            i = 0;
+        }
         
         // Diese Methode übernimmt Stephan
         return erg;
