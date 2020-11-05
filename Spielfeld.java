@@ -62,6 +62,7 @@ public class Spielfeld
     private boolean pruefeVierInEinerSpalte ()
     {
         boolean erg = false;
+        // Diese Methode übernimmt Stephan
         return erg;
     }       
 
