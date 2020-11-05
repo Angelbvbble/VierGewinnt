@@ -100,13 +100,13 @@ public class Spielfeld
         {
             for(int j = 0; j>Spielfeld[i].length-4; j++)
             {
-                if(Spielfeld[i][j] == null )
+                if(Spielfeld[i][j] != null && Spielfeld[i][j+1] != null && Spielfeld[i][j+2] != null && Spielfeld[i][j+3] != null)
                 {
                     if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen() && 
-                       Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+2].gibZeichen() && 
-                       Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() )
+                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+2].gibZeichen() && 
+                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() )
                     {    
-                       return true;
+                        return true;
                     }
                 }
             }
@@ -141,7 +141,7 @@ public class Spielfeld
      */
     public void ausgeben()
     {
-        
+
     }
 
     /**
@@ -150,7 +150,7 @@ public class Spielfeld
      */
     public void ausgabeGewonnen (String Spieler)
     {
-        
+
     }
 
     /**
@@ -159,7 +159,7 @@ public class Spielfeld
      */
     public void neuesSpielfeldErzeugen ()
     { 
-        
+
     }
 
     public Stein [][] gibSpielfeld()
