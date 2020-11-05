@@ -71,6 +71,7 @@ public class Spielfeld
     private boolean pruefeVierInEinerZeile ()
     {
         boolean erg = false;
+        //Marc
         return erg;
     }
 
