@@ -189,11 +189,8 @@ public class Spielfeld
      */
     public void ausgabeGewonnen (String Spieler)
     {
-        if (pruefeVierInEinerZeile() == true || pruefeVierInEinerSpalte()
-        == true || pruefeVierDiagonalRL() == true || pruefeVierDiagonalLR() == true )
-        {
-            system.out.println("GEWONNEN"); 
-        }
+        ausgeben();
+        System.out.println (" Herzlichen Glückwünsch, sie haben das Spiel GEWONNEN! ");
     }
 
     /**
