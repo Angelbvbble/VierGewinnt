@@ -109,7 +109,7 @@ public class Spielfeld
                 {
                     if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen() && 
                     Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+2].gibZeichen() && 
-                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() )
+                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() 
                     {    
                         return true;
                     }
@@ -155,6 +155,23 @@ public class Spielfeld
     private boolean pruefeVierDiagonalRL ()
     {
         boolean erg = false;
+        for (int i = 0; i < Spielfeld.length-2 ; i++)
+        {
+          for (int a = 0; a < Spielfeld[0].length; a++)
+          {
+        if(Spielfeld[i][a] != null && Spielfeld[i+1][a+1] !=null && Spielfeld[i+2][a+2] != null && Spielfeld[i+3][a+3] != null )
+        {
+           if (Spielfeld[i][a].gibZeichen() == Spielfeld[i+1][a+1].gibZeichen()&& Spielfeld[i][a].gibZeichen() == Spielfeld[i+2][a+2].gibZeichen() && Spielfeld[i][a].gibZeichen() == Spielfeld[i+3][a+3].gibZeichen())
+            {
+              return true;
+            }
+            else
+            {
+              return false;
+            }
+        }
+            }
+        }
         return erg;
     }
 
