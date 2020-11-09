@@ -109,7 +109,7 @@ public class Spielfeld
                 {
                     if(Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+1].gibZeichen() && 
                     Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+2].gibZeichen() && 
-                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() 
+                    Spielfeld[i][j].gibZeichen() == Spielfeld[i][j+3].gibZeichen() )
                     {    
                         return true;
                     }
