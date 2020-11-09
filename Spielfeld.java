@@ -172,7 +172,11 @@ public class Spielfeld
      */
     public void ausgabeGewonnen (String Spieler)
     {
-
+        if (pruefeVierInEinerZeile() == true || pruefeVierInEinerSpalte()
+        == true || pruefeVierDiagonalRL() == true || pruefeVierDiagonalLR() == true )
+        {
+            system.out.println("GEWONNEN"); 
+        }
     }
 
     /**
