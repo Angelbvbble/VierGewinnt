@@ -190,7 +190,7 @@ public class Spielfeld
     public void ausgabeGewonnen (String Spieler)
     {
         ausgeben();
-        System.out.println (" Herzlichen Glückwünsch, sie haben das Spiel GEWONNEN! ");
+        System.out.println (" Herzlichen Glückwünsch, Sie haben das Spiel GEWONNEN! ");
     }
 
     /**
